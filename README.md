@@ -54,7 +54,7 @@ All content lives in `index.html`; there is no data file.
 
 ## Deploy
 
-Any static host works. This folder is pushed to <https://github.com/akhilyad/myportfolio> and served by GitHub Pages (Settings > Pages > deploy from the `main` branch, `/ (root)`) at <https://akhilyad.github.io/myportfolio/>, the address printed on the CV. All asset paths are relative (`./assets/...`), so the site works from that sub-path. The earlier Next.js version of the site is still in the repo history. The empty `.nojekyll` file tells Pages to serve the files as they are instead of running them through Jekyll, which keeps deploys fast. Static hosts cache aggressively, so after changing CSS or JS a visitor may need a hard refresh.
+Any static host works. This folder is pushed to <https://github.com/akhilyad/portfolio> and served by GitHub Pages (Settings > Pages > deploy from the `main` branch, `/ (root)`) at <https://akhilyad.github.io/portfolio/>. All asset paths are relative (`./assets/...`), so the site works from that sub-path. The earlier Next.js version of the site is still in the repo history. The empty `.nojekyll` file tells Pages to serve the files as they are instead of running them through Jekyll, which keeps deploys fast. Static hosts cache aggressively, so after changing CSS or JS a visitor may need a hard refresh.
 
 ## Credits and licence
 
