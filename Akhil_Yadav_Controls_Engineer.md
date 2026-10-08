@@ -1,6 +1,6 @@
 **AKHIL YADAV**  
 **Controls Engineer | Energy Infrastructure and Data Centers**  
-\+49 176 72678553  |  akhil20698@gmail.com  |  linkedin.com/in/akhilyad  |  akhilyad.github.io/myportfolio  |  Berlin, Germany  
+\+49 176 72678553  |  akhil20698@gmail.com  |  linkedin.com/in/akhilyad  |  akhilyad.github.io/portfolio  |  Berlin, Germany  
 EU Work Authorisation: Available  |  Open to relocation  |  Available Immediately
 
 **PROFESSIONAL SUMMARY**  
