@@ -1,8 +1,7 @@
-node_modules/
-dist/
-.next/
-*.log
-.env
-.env.local
+# local Claude Code preview config
+.claude/
+
+# OS clutter
+Thumbs.db
+Desktop.ini
 .DS_Store
-.gstack/

@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#F0F4F9">
+  <title>Akhil Yadav – Controls Engineer</title>
+  <meta name="description" content="Akhil Yadav, controls engineer in Berlin. SCADA, RTU, PLC and DCS work for renewable energy and data centers: ABB 800xA, Yokogawa CENTUM, IEC 61511.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Akhil Yadav – Controls Engineer">
+  <meta property="og:description" content="SCADA, RTU and controls systems for renewable energy and data centers.">
+
+  <!-- favicon -->
+  <link rel="icon" href="./assets/images/favicon.svg" type="image/svg+xml">
+
+  <!-- custom css -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- google fonts: Manrope (400, 600) for text, JetBrains Mono (400, 600) for technical labels, chips and standards footnotes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Manrope:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--
+    - icon sprite
+      i-*      small UI icons (Feather-style, 24 grid)
+      svc-*    service line-art icons (48 grid)
+  -->
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-mail" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></symbol>
+    <symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></symbol>
+    <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></symbol>
+    <symbol id="i-activity" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+    <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></symbol>
+
+    <!-- service line art -->
+    <symbol id="svc-scada" viewBox="0 0 48 48"><rect x="5" y="7" width="38" height="26" rx="3"/><polyline points="10,26 17,19 23,23 31,14 38,18"/><line x1="24" y1="33" x2="24" y2="40"/><line x1="16" y1="41" x2="32" y2="41"/></symbol>
+    <symbol id="svc-network" viewBox="0 0 48 48"><circle cx="24" cy="26" r="4"/><circle cx="24" cy="9" r="3"/><circle cx="9" cy="40" r="3"/><circle cx="39" cy="40" r="3"/><line x1="24" y1="12" x2="24" y2="22"/><line x1="11.2" y1="38" x2="21.1" y2="28.7"/><line x1="36.8" y1="38" x2="26.9" y2="28.7"/><path d="M30 4.5a7 7 0 0 1 0 9"/><path d="M34 1.5a12 12 0 0 1 0 15"/></symbol>
+    <symbol id="svc-hv" viewBox="0 0 48 48"><circle cx="24" cy="18" r="9"/><circle cx="24" cy="30" r="9"/><line x1="24" y1="2" x2="24" y2="9"/><line x1="24" y1="39" x2="24" y2="46"/><line x1="8" y1="24" x2="12" y2="24"/><line x1="36" y1="24" x2="40" y2="24"/></symbol>
+    <symbol id="svc-rca" viewBox="0 0 48 48"><circle cx="21" cy="21" r="14"/><line x1="31" y1="31" x2="43" y2="43"/><polyline points="11,22 15,22 18,15 22,28 25,19 27,22 31,22"/></symbol>
+    <symbol id="svc-docs" viewBox="0 0 48 48"><path d="M11 4h18l9 9v31H11z"/><polyline points="29,4 29,13 38,13"/><polyline points="16,23 18.5,25.5 22,21"/><line x1="25" y1="23" x2="33" y2="23"/><polyline points="16,32 18.5,34.5 22,30"/><line x1="25" y1="32" x2="33" y2="32"/></symbol>
+    <symbol id="svc-safety" viewBox="0 0 48 48"><path d="M24 4l16 6v12c0 10-7 17-16 22C15 39 8 32 8 22V10z"/><polyline points="17,24 22,29 31,19"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></symbol>
+    <symbol id="i-maximize" viewBox="0 0 24 24"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></symbol>
+  </svg>
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <!-- Drop a square photo at assets/images/avatar.jpg and it replaces the monogram automatically. -->
+        <figure class="avatar-box">
+          <span class="avatar-monogram" aria-hidden="true">AY</span>
+          <img src="./assets/images/avatar.jpg" alt="Akhil Yadav" width="150" height="150" onerror="this.remove()">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Akhil Yadav">Akhil Yadav</h1>
+
+          <p class="title">Controls Engineer</p>
+        </div>
+
+        <button class="info_more-btn" type="button" data-sidebar-btn aria-expanded="false" aria-controls="sidebar-more">
+          <span data-sidebar-btn-label>Show contacts</span>
+
+          <svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more" id="sidebar-more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:akhil20698@gmail.com" class="contact-link">akhil20698@gmail.com</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+4917672678553" class="contact-link">+49 176 72678553</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Berlin, Germany</address>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Availability</p>
+
+              <p class="contact-text">Immediately · EU work authorisation</p>
+            </div>
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/akhilyad" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://github.com/akhilyad" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="mailto:akhil20698@gmail.com" class="social-link" aria-label="Email">
+              <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>
+            </a>
+          </li>
+
+        </ul>
+
+        <a class="btn btn-block sidebar-cv" href="./assets/files/Akhil_Yadav_Controls_Engineer_CV.pdf" download="Akhil_Yadav_Controls_Engineer_CV.pdf" target="_blank" rel="noopener noreferrer">
+          <svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>
+          <span>Download CV</span>
+        </a>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar" aria-label="Sections">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link active" type="button" data-nav-link="about" aria-current="page">About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" type="button" data-nav-link="projects">Projects</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" type="button" data-nav-link="skills">Skills</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" type="button" data-nav-link="resume">Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" type="button" data-nav-link="contact">Contact</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About Me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            Controls Engineer with 5 years of experience delivering automation across offshore oil &amp; gas, wastewater
+            systems, and utility-scale solar sites. My work spans engineering, testing, strategic procurement, and
+            stakeholder management across the full project lifecycle.
+          </p>
+
+          <p>
+            Proficient in control logic development, troubleshooting, stakeholder management, and conflict resolution
+            between OEMs, TPCs, and internal teams to eliminate commissioning delays. Backed by an MBA in Energy
+            Management from TU Berlin, I bridge hands-on engineering with commercial execution.
+          </p>
+
+          <p class="about-cta">
+            If you're looking for a controls engineer,
+            <button type="button" class="inline-link" data-nav-link="contact">let's connect</button>. I'd love to
+            discuss the opportunity and share how I can add value to your team.
+          </p>
+        </section>
+
+
+        <!--
+          - what I do
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">Engineering Scope</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <svg class="svc-icon" aria-hidden="true"><use href="#svc-scada"/></svg>
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Controls &amp; SCADA</h4>
+
+                <p class="service-item-text">
+                  SCADA, PLC and RTU systems on ABB 800xA, Yokogawa CENTUM VP and STARDOM, with IEC 61131-3
+                  function-block libraries and HMI graphics.
+                </p>
+
+                <p class="service-item-standards">
+                  <span>Standards:</span> IEC 61131-3, ISA-18.2 / IEC 62682 alarm management, ISA-101 HMI, ISA-5.1
+                  instrument symbols
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <svg class="svc-icon" aria-hidden="true"><use href="#svc-network"/></svg>
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Protocols &amp; networks</h4>
+
+                <p class="service-item-text">
+                  IEC 61850, DNP3, Modbus and OPC UA/DA over TCP/IP, with redundant fibre and radio telemetry links.
+                </p>
+
+                <p class="service-item-standards">
+                  <span>Standards:</span> IEC 61850, IEEE 1815 DNP3, IEC 62541 OPC UA, IEC 62439 PRP/HSR
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <svg class="svc-icon" aria-hidden="true"><use href="#svc-hv"/></svg>
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">High-voltage &amp; plant equipment</h4>
+
+                <p class="service-item-text">
+                  Inverters, transformer stations, controllers, I/O systems and OEM SCADA packages.
+                </p>
+
+                <p class="service-item-standards">
+                  <span>Standards:</span> IEC 62109 inverter safety, IEC 60076 power transformers, EN 50549-2 and
+                  VDE-AR-N 4110 grid connection, IEC 60529 IP65/IP66 enclosures, IEC 60068 environmental
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <svg class="svc-icon" aria-hidden="true"><use href="#svc-rca"/></svg>
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Root cause &amp; reliability</h4>
+
+                <p class="service-item-text">
+                  RCA using 5 Whys and Ishikawa, with corrective actions for trip, communication-loss and
+                  redundancy-loss events.
+                </p>
+
+                <p class="service-item-standards">
+                  <span>Standards:</span> IEC 62740 RCA, IEC 61703 MTBF
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <svg class="svc-icon" aria-hidden="true"><use href="#svc-docs"/></svg>
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Software lifecycle</h4>
+
+                <p class="service-item-text">
+                  Software migration, FAT/SAT, MODSIM testing and loop checks.
+                </p>
+
+                <p class="service-item-standards">
+                  <span>Standards:</span> IEC 62381 FAT/SAT, IEC 62337 commissioning, IEC 61508-3 and IEC 61511-1
+                  software clauses
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <svg class="svc-icon" aria-hidden="true"><use href="#svc-safety"/></svg>
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Functional safety</h4>
+
+                <p class="service-item-text">
+                  IEC 61511 lifecycle work: SIL-rated shutdown interlocks, ESD, and fire and gas cause and effect.
+                </p>
+
+                <p class="service-item-standards">
+                  <span>Standards:</span> IEC 61511-1/-2/-3, IEC 61508, ISA-TR84.00.07 fire and gas, IEC 60079
+                  hazardous areas
+                </p>
+              </div>
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - systems & platforms: uniform badge plates; images are contained or framed, never stretched
+        -->
+
+        <section class="toolbox">
+
+          <h3 class="h3 toolbox-title">Systems &amp; Industrial Platforms</h3>
+
+          <ul class="badge-grid">
+
+            <li class="badge badge-feature">
+              <figure class="badge-plate">
+                <img src="./assets/images/toolbox/abb-800xa.webp" alt="ABB AC 800M controller and I/O modules" width="341" height="240" loading="lazy">
+                <span class="badge-stamp">Certified</span>
+              </figure>
+              <p class="badge-name">ABB 800xA</p>
+              <p class="badge-note">DCS · Applied Operations</p>
+            </li>
+
+            <li class="badge">
+              <figure class="badge-plate">
+                <img src="./assets/images/toolbox/sap-ariba.webp" alt="" width="392" height="96" loading="lazy">
+              </figure>
+              <p class="badge-name">SAP Ariba</p>
+              <p class="badge-note">Procurement</p>
+            </li>
+
+            <li class="badge">
+              <figure class="badge-plate badge-plate-photo">
+                <img src="./assets/images/toolbox/centum-vp.webp" alt="Yokogawa CENTUM VP controller rack" width="278" height="155" loading="lazy">
+              </figure>
+              <p class="badge-name">Yokogawa CENTUM VP</p>
+              <p class="badge-note">DCS</p>
+            </li>
+
+            <li class="badge badge-accent-stardom">
+              <figure class="badge-plate badge-plate-photo">
+                <img src="./assets/images/toolbox/stardom-fcn.webp" alt="Yokogawa STARDOM FCN controller" width="560" height="311" loading="lazy">
+              </figure>
+              <p class="badge-name">STARDOM FCN</p>
+              <p class="badge-note">RTU</p>
+            </li>
+
+            <li class="badge">
+              <figure class="badge-plate">
+                <img src="./assets/images/toolbox/fast-tools.webp" alt="FAST/TOOLS SCADA operator screens" width="429" height="240" loading="lazy">
+              </figure>
+              <p class="badge-name">FAST/TOOLS</p>
+              <p class="badge-note">SCADA</p>
+            </li>
+
+            <li class="badge">
+              <figure class="badge-plate">
+                <img src="./assets/images/toolbox/python.webp" alt="" width="192" height="192" loading="lazy">
+              </figure>
+              <p class="badge-name">Python</p>
+              <p class="badge-note">Modelling</p>
+            </li>
+
+            <li class="badge">
+              <figure class="badge-plate">
+                <img src="./assets/images/toolbox/power-bi.webp" alt="" width="146" height="192" loading="lazy">
+              </figure>
+              <p class="badge-name">Power BI</p>
+              <p class="badge-note">KPI reporting</p>
+            </li>
+
+            <li class="badge">
+              <figure class="badge-plate">
+                <img src="./assets/images/toolbox/autocad.webp" alt="" width="182" height="192" loading="lazy">
+              </figure>
+              <p class="badge-name">AutoCAD</p>
+              <p class="badge-note">Drawings</p>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #PROJECTS
+      -->
+
+      <article class="projects-page" data-page="projects">
+
+        <header>
+          <h2 class="h2 article-title">Industrial Projects &amp; Technical Studies</h2>
+        </header>
+
+        <section class="projects">
+
+          <!-- a card can sit in several categories: data-category is space-separated -->
+          <div class="filter-bar has-scrollbar" role="group" aria-label="Filter projects and technical studies" data-filter-bar>
+            <button class="filter-tab active" type="button" data-filter="all" aria-pressed="true">All <span class="filter-count" data-filter-count></span></button>
+            <button class="filter-tab" type="button" data-filter="dcs" aria-pressed="false">DCS &amp; SCADA <span class="filter-count" data-filter-count></span></button>
+            <button class="filter-tab" type="button" data-filter="safety" aria-pressed="false">Safety &amp; testing <span class="filter-count" data-filter-count></span></button>
+            <button class="filter-tab" type="button" data-filter="solar" aria-pressed="false">Solar EPC <span class="filter-count" data-filter-count></span></button>
+            <button class="filter-tab" type="button" data-filter="modelling" aria-pressed="false">Modelling &amp; Analytics <span class="filter-count" data-filter-count></span></button>
+          </div>
+
+          <ul class="card-grid">
+
+            <!-- project 1 -->
+            <li class="work-card active" data-filter-item data-category="dcs safety">
+
+              <button class="work-visual work-visual-cover" type="button" data-lightbox aria-label="Enlarge image: offshore production platforms">
+                <img src="./assets/images/projects/offshore-platform.webp" alt="Offshore oil and gas production platforms linked by bridges" width="770" height="398" loading="lazy">
+                <span class="work-zoom" aria-hidden="true"><svg class="icon"><use href="#i-maximize"/></svg></span>
+              </button>
+
+              <div class="work-body">
+
+                <header class="work-head">
+                  <p class="work-context">Yokogawa · QatarEnergy offshore platforms · 2020–2022</p>
+                  <h3 class="work-title">Offshore telemetry &amp; RTU upgrade</h3>
+                </header>
+
+                <ul class="bullet-list work-bullets">
+                  <li>STARDOM RTU to CENTUM DCS telemetry across two production stations and 40+ wellhead jackets, over OPC with redundant fibre and radio links.</li>
+                  <li>Multi-vendor protocol integration: Modbus RTU, DNP3 and OPC links pre-tested in MODSIM to clear IP conflicts and tag-mapping errors before FAT.</li>
+                  <li>Offshore FAT/SAT validation across 14 FATs and 8 SATs; zero open safety items after cause and effect verification to IEC 61511.</li>
+                </ul>
+
+                <footer class="work-foot">
+                  <ul class="chip-list work-chips">
+                    <li class="chip">STARDOM</li><li class="chip">CENTUM VP</li><li class="chip">OPC</li><li class="chip">Modbus RTU</li><li class="chip">DNP3</li><li class="chip">IEC 61511</li>
+                  </ul>
+                </footer>
+
+              </div>
+
+            </li>
+
+            <!-- project 2 -->
+            <li class="work-card active" data-filter-item data-category="dcs safety">
+
+              <button class="work-visual work-visual-plate" type="button" data-lightbox aria-label="Enlarge diagram: ProControl P14 system topology">
+                <img src="./assets/images/projects/p14-topology.png" alt="ProControl P14 system structure: operations servers and clients, engineering and diagnosis tools, and P14 process stations on a redundant remote bus" width="591" height="312" loading="lazy">
+                <span class="work-zoom" aria-hidden="true"><svg class="icon"><use href="#i-maximize"/></svg></span>
+              </button>
+
+              <div class="work-body">
+
+                <header class="work-head">
+                  <p class="work-context">ABB Energy Industries · 2023–2024</p>
+                  <h3 class="work-title">Legacy DCS migration to 800xA</h3>
+                </header>
+
+                <ul class="bullet-list work-bullets">
+                  <li>Migrated 45+ legacy ProControl P14 modules from C-code logic to IEC 61131-3 Structured Text control libraries built on APID and ANMON function blocks.</li>
+                  <li>Verified the target 800xA architecture to maintain system MTBF and deterministic execution; the migration raised MTBF 43%.</li>
+                  <li>Configured server redundancy (HAC), the historian and OPC DA/AE/UA links; ran FAT/SAT from audit-ready I/O lists.</li>
+                </ul>
+
+                <footer class="work-foot">
+                  <ul class="chip-list work-chips">
+                    <li class="chip">ProControl P14</li><li class="chip">ABB 800xA</li><li class="chip">IEC 61131-3</li><li class="chip">Structured Text</li><li class="chip">HAC</li><li class="chip">OPC UA</li>
+                  </ul>
+                </footer>
+
+              </div>
+
+            </li>
+
+            <!-- project 3 -->
+            <li class="work-card active" data-filter-item data-category="solar">
+
+              <button class="work-visual work-visual-cover" type="button" data-lightbox aria-label="Enlarge image: utility-scale solar farm">
+                <img src="./assets/images/projects/solar-farm.webp" alt="Aerial view of a utility-scale solar farm" width="960" height="440" loading="lazy">
+                <span class="work-zoom" aria-hidden="true"><svg class="icon"><use href="#i-maximize"/></svg></span>
+              </button>
+
+              <div class="work-body">
+
+                <header class="work-head">
+                  <p class="work-context">ib vogt GmbH · 2025</p>
+                  <h3 class="work-title">Solar EPC electrical procurement &amp; design</h3>
+                </header>
+
+                <ul class="bullet-list work-bullets">
+                  <li>Reviewed SLDs, P&amp;IDs and control panel packages before construction: 42 panels, 680+ I/O points.</li>
+                  <li>End-to-end technical procurement through SAP Ariba for inverter, transformer-station and SCADA packages across a 350 MWp, 6-site portfolio.</li>
+                  <li>Bids benchmarked against 66 projects (3.4 GWp, 15 countries) to size and price each package.</li>
+                </ul>
+
+                <footer class="work-foot">
+                  <ul class="chip-list work-chips">
+                    <li class="chip">SAP Ariba</li><li class="chip">Power BI</li><li class="chip">SLD review</li><li class="chip">Inverters</li><li class="chip">Transformer stations</li><li class="chip">SCADA</li>
+                  </ul>
+                </footer>
+
+              </div>
+
+            </li>
+
+            <!-- modelling: Megawatt -->
+            <li class="work-card active" data-filter-item data-category="modelling">
+
+              <button class="work-visual work-visual-plate" type="button" data-lightbox aria-label="Enlarge image: Circular Economy lifecycle framework">
+                <img src="./assets/images/projects/megawatt-circular-economy.webp" alt="Circular economy lifecycle: raw materials, sustainable design, production, distribution, consumption, reuse and repair, collection, and waste management" width="1200" height="1023" loading="lazy">
+                <span class="work-zoom" aria-hidden="true"><svg class="icon"><use href="#i-maximize"/></svg></span>
+              </button>
+
+              <div class="work-body">
+
+                <header class="work-head">
+                  <p class="work-context">Megawatt · Building-component reuse</p>
+                  <h3 class="work-title">Circular Reuse Index for HVAC and building components</h3>
+                </header>
+
+                <ul class="bullet-list work-bullets">
+                  <li>Ranked 152 shortlisted building components on a 0–100 Circular Reuse Index, from 89 (heat exchangers) down to 43 (duct insulation).</li>
+                  <li>Weighted five criteria in Python: CO2 and waste 25%, economics 25%, disassembly 20%, standardization 15%, durability 15%.</li>
+                  <li>Delivered as an Excel tool with live formulas, so the team changes the weights and the ranking updates without Python; includes a Top 10 chart.</li>
+                  <li>Matched project bills of materials to the master scores by description, with a confidence column and a neutral fallback score.</li>
+                </ul>
+
+                <footer class="work-foot">
+                  <ul class="chip-list work-chips">
+                    <li class="chip">Python</li><li class="chip">pandas</li><li class="chip">Excel formulas</li><li class="chip">Scoring framework</li><li class="chip">Circularity</li>
+                  </ul>
+                </footer>
+
+              </div>
+
+            </li>
+
+            <!-- modelling: offshore wind model -->
+            <li class="work-card active" data-filter-item data-category="modelling">
+
+              <button class="work-visual work-visual-cover" type="button" data-lightbox aria-label="Enlarge image: offshore wind farm">
+                <img src="./assets/images/projects/dogger-bank-wind.webp" alt="Offshore wind farm: turbine array with a substation platform" width="960" height="528" loading="lazy">
+                <span class="work-zoom" aria-hidden="true"><svg class="icon"><use href="#i-maximize"/></svg></span>
+              </button>
+
+              <div class="work-body">
+
+                <header class="work-head">
+                  <p class="work-context">Financial model review · North Sea wind and hydrogen hub · 2025</p>
+                  <h3 class="work-title">Offshore wind hub: investment model review and rebuild</h3>
+                </header>
+
+                <ul class="bullet-list work-bullets">
+                  <li>Caught that the reported 8.8% IRR was an IRR() over a truncated range times 10; the cash flows' true IRR was about 88%, the sign the model was wrong.</li>
+                  <li>Rebuilt it as a full project model on benchmark inputs: EUR 59.7B capex for 15 GW, tax, 60% debt, decommissioning, and a CAPM-derived 7.2% WACC in place of a flat 5% hurdle.</li>
+                  <li>Showed the project is NPV-negative at EUR −37.9B: real LCOE of EUR 127/MWh against a EUR 44/MWh realised price, so it needs a CfD, not merchant revenue.</li>
+                  <li>Ran 25 live cash-flow cases: capex ±20% swings NPV by EUR 18.4B, the largest driver; a 1.35x DSCR covenant supports about 14% gearing, not 60%.</li>
+                </ul>
+
+                <footer class="work-foot">
+                  <ul class="chip-list work-chips">
+                    <li class="chip">Excel</li><li class="chip">Financial modelling</li><li class="chip">WACC</li><li class="chip">DSCR</li><li class="chip">Sensitivity analysis</li><li class="chip">Offshore wind</li>
+                  </ul>
+                  <a class="work-link" href="https://docs.google.com/spreadsheets/d/1c__-EGF3v0lXq3sfj8XJLyrZ_S7Yw0YC/edit?usp=sharing&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener noreferrer">
+                    <span>Open the Excel model</span>
+                    <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg>
+                  </a>
+                </footer>
+
+              </div>
+
+            </li>
+
+            <!-- modelling: hydrogen thesis -->
+            <li class="work-card active" data-filter-item data-category="modelling">
+
+              <button class="work-visual work-visual-plate" type="button" data-lightbox aria-label="Enlarge image: TU Berlin Energy Management logo">
+                <img src="./assets/images/projects/tu-berlin-energy-management.webp" alt="TU Berlin Energy Management MBA emblem" width="460" height="446" loading="lazy">
+                <span class="work-zoom" aria-hidden="true"><svg class="icon"><use href="#i-maximize"/></svg></span>
+              </button>
+
+              <div class="work-body">
+
+                <header class="work-head">
+                  <p class="work-context">Master's thesis · TU Berlin</p>
+                  <h3 class="work-title">Techno-economic hydrogen infrastructure optimization</h3>
+                </header>
+
+                <ul class="bullet-list work-bullets">
+                  <li>Python-based optimisation and mathematical modelling of green hydrogen production, storage and transport feasibility, from regional to global scale.</li>
+                  <li>Hourly cost model across 9 countries, 8,760 steps each.</li>
+                  <li>Finding: a 1% rise in financing cost cancels a 10% gain in renewable output.</li>
+                </ul>
+
+                <footer class="work-foot">
+                  <ul class="chip-list work-chips">
+                    <li class="chip">Python</li><li class="chip">Optimisation</li><li class="chip">Techno-economics</li><li class="chip">Green hydrogen</li>
+                  </ul>
+                  <a class="work-link" href="https://drive.google.com/file/d/1vAiGs61-3w9qn9RQujVmuvg6lbE9qK8X/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                    <span>Read the thesis</span>
+                    <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg>
+                  </a>
+                </footer>
+
+              </div>
+
+            </li>
+
+            <!-- modelling: gas leak detection paper -->
+            <li class="work-card active" data-filter-item data-category="modelling">
+
+              <button class="work-visual work-visual-plate" type="button" data-lightbox aria-label="Enlarge image: Springer Professional publication emblem">
+                <img src="./assets/images/projects/springer-professional-logo.webp" alt="Springer Professional publication knight emblem and wordmark" width="576" height="130" loading="lazy">
+                <span class="work-zoom" aria-hidden="true"><svg class="icon"><use href="#i-maximize"/></svg></span>
+              </button>
+
+              <div class="work-body">
+
+                <header class="work-head">
+                  <p class="work-context">Springer Singapore · 2020</p>
+                  <h3 class="work-title">Machine learning for pipeline gas leak detection</h3>
+                </header>
+
+                <ul class="bullet-list work-bullets">
+                  <li>Comparative analysis of ML classification algorithms applied to sensor telemetry for automated, early-stage pipeline gas leak detection.</li>
+                  <li>Published by Springer Singapore, 2020.</li>
+                </ul>
+
+                <footer class="work-foot">
+                  <ul class="chip-list work-chips">
+                    <li class="chip">Machine learning</li><li class="chip">Classification</li><li class="chip">Sensor telemetry</li>
+                  </ul>
+                  <a class="work-link" href="https://www.springerprofessional.de/en/a-comparative-study-of-machine-learning-algorithms-for-gas-leak-/18414304" target="_blank" rel="noopener noreferrer">
+                    <span>Read the paper</span>
+                    <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg>
+                  </a>
+                </footer>
+
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #SKILLS
+      -->
+
+      <article class="skills" data-page="skills">
+
+        <header>
+          <h2 class="h2 article-title">Skills</h2>
+        </header>
+
+        <section class="skill-groups">
+
+          <ul class="skill-grid">
+
+            <li class="skill-card skill-card-wide">
+              <div class="skill-card-head">
+                <div class="icon-box"><svg class="icon" aria-hidden="true"><use href="#i-cpu"/></svg></div>
+                <h3 class="h4">Controls &amp; SCADA</h3>
+              </div>
+              <ul class="chip-list">
+                <li class="chip">SCADA, PLC and RTU systems</li>
+                <li class="chip">ABB 800xA</li>
+                <li class="chip">Yokogawa CENTUM VP/C3000</li>
+                <li class="chip">STARDOM FCN RTUs</li>
+                <li class="chip">FAST/TOOLS SCADA</li>
+                <li class="chip">IEC 61131-3 (Structured Text, FBD, Ladder)</li>
+                <li class="chip">Function-block libraries</li>
+                <li class="chip">HMI graphics</li>
+              </ul>
+            </li>
+
+            <li class="skill-card">
+              <div class="skill-card-head">
+                <div class="icon-box"><svg class="icon" aria-hidden="true"><use href="#i-activity"/></svg></div>
+                <h3 class="h4">Protocols &amp; networks</h3>
+              </div>
+              <ul class="chip-list">
+                <li class="chip">IEC 61850</li>
+                <li class="chip">DNP3</li>
+                <li class="chip">Modbus TCP/RTU</li>
+                <li class="chip">OPC UA/DA</li>
+                <li class="chip">TCP/IP</li>
+                <li class="chip">HART</li>
+                <li class="chip">Redundant fibre and radio telemetry links</li>
+              </ul>
+            </li>
+
+            <li class="skill-card">
+              <div class="skill-card-head">
+                <div class="icon-box"><svg class="icon" aria-hidden="true"><use href="#i-layers"/></svg></div>
+                <h3 class="h4">High-voltage &amp; plant equipment</h3>
+              </div>
+              <ul class="chip-list">
+                <li class="chip">Inverters</li>
+                <li class="chip">Transformer stations</li>
+                <li class="chip">Controllers</li>
+                <li class="chip">I/O systems</li>
+                <li class="chip">Telecommunications links</li>
+                <li class="chip">OEM SCADA packages (Huawei, SMA, KACO, Gantner)</li>
+              </ul>
+            </li>
+
+            <li class="skill-card">
+              <div class="skill-card-head">
+                <div class="icon-box"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg></div>
+                <h3 class="h4">Root cause &amp; reliability</h3>
+              </div>
+              <ul class="chip-list">
+                <li class="chip">Root cause analysis (RCA)</li>
+                <li class="chip">Corrective and preventive actions</li>
+                <li class="chip">Trip, communication-loss and redundancy-loss diagnosis (LOV/LOR-type events)</li>
+                <li class="chip">Server redundancy (HAC)</li>
+                <li class="chip">MTBF and availability tracking</li>
+                <li class="chip">Alarm rationalisation</li>
+              </ul>
+            </li>
+
+            <li class="skill-card">
+              <div class="skill-card-head">
+                <div class="icon-box"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></div>
+                <h3 class="h4">Software lifecycle &amp; documentation</h3>
+              </div>
+              <ul class="chip-list">
+                <li class="chip">Software migration</li>
+                <li class="chip">FAT/SAT</li>
+                <li class="chip">MODSIM testing</li>
+                <li class="chip">Loop checks</li>
+                <li class="chip">Punch-list closure</li>
+                <li class="chip">Control narratives and functional descriptions</li>
+                <li class="chip">I/O lists</li>
+                <li class="chip">ISA datasheets</li>
+                <li class="chip">Cable schedules</li>
+                <li class="chip">SOPs</li>
+              </ul>
+            </li>
+
+            <li class="skill-card">
+              <div class="skill-card-head">
+                <div class="icon-box"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></div>
+                <h3 class="h4">Functional safety</h3>
+              </div>
+              <ul class="chip-list">
+                <li class="chip">IEC 61511 lifecycle</li>
+                <li class="chip">IEC 61508</li>
+                <li class="chip">SIL-rated shutdown interlocks</li>
+                <li class="chip">ESD</li>
+                <li class="chip">Fire and gas cause and effect</li>
+                <li class="chip">HAZOP/SIL support</li>
+                <li class="chip">NAMUR NE 107</li>
+              </ul>
+            </li>
+
+            <li class="skill-card skill-card-wide skill-card-tools">
+              <div class="skill-card-head">
+                <div class="icon-box"><svg class="icon" aria-hidden="true"><use href="#i-wrench"/></svg></div>
+                <h3 class="h4">Tools</h3>
+              </div>
+              <ul class="chip-list">
+                <li class="chip">Python</li>
+                <li class="chip">Power BI</li>
+                <li class="chip">MS Project</li>
+                <li class="chip">Excel</li>
+                <li class="chip">AutoCAD</li>
+                <li class="chip">EPLAN (familiar)</li>
+                <li class="chip">SAP Ariba</li>
+              </ul>
+            </li>
+
+          </ul>
+
+        </section>
+
+        <section class="skill-extras">
+
+          <div class="extras-grid">
+
+            <div class="skill-card">
+              <div class="skill-card-head">
+                <div class="icon-box"><svg class="icon" aria-hidden="true"><use href="#i-award"/></svg></div>
+                <h3 class="h4">Certifications</h3>
+              </div>
+              <ul class="plain-list">
+                <li>IEC 61511 Functional Safety</li>
+                <li>ABB 800xA Applied Operations</li>
+              </ul>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-card-head">
+                <div class="icon-box"><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg></div>
+                <h3 class="h4">Languages</h3>
+              </div>
+              <ul class="plain-list">
+                <li>English <span class="muted">· C2, business proficient</span></li>
+                <li>German <span class="muted">· B1, intermediate</span></li>
+              </ul>
+            </div>
+
+          </div>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <svg class="icon" aria-hidden="true"><use href="#i-briefcase"/></svg>
+            </div>
+
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Controls Engineer, EPC Solar</h4>
+
+              <p class="timeline-org">ib vogt GmbH</p>
+
+              <p class="timeline-date">Apr 2025 — Sep 2025</p>
+
+              <p class="timeline-place">Berlin, Germany</p>
+
+              <p class="timeline-text">
+                350 MWp solar EPC portfolio, 6 concurrent sites; GBP 9M+ of inverter, transformer-station, SCADA and
+                balance-of-plant packages.
+              </p>
+
+              <div class="timeline-group">
+                <h5 class="h5 timeline-group-title">Inverter, transformer-station &amp; SCADA package review</h5>
+                <ul class="bullet-list">
+                  <li>Benchmarked inverter and transformer-station bids against 66 projects (3.4 GWp, 15 countries; mean 4.6 cent/Wp) by sizing each package on DC/AC ratio (median 1.16) and capacity.</li>
+                  <li>Narrowed 4 SCADA bidders (38–76% price spread) to a clear award case by pricing every bid at four project sizes (10–150 MWp).</li>
+                </ul>
+              </div>
+
+              <div class="timeline-group">
+                <h5 class="h5 timeline-group-title">Customer, subcontractor &amp; OEM technical support</h5>
+                <ul class="bullet-list">
+                  <li>Raised on-time delivery from 76% to 97% across 6 sites by tracking OEM submittals and closing technical queries (RFIs) with Huawei, SMA, KACO and Gantner.</li>
+                  <li>Secured GBP 9M+ across 6 OEM contracts with 66-month inverter warranties, 5% warranty bonds and late-delivery penalties of 0.2–1% per day capped at 5–15%; cut the supplier base from 9 to 6.</li>
+                </ul>
+              </div>
+
+              <div class="timeline-group">
+                <h5 class="h5 timeline-group-title">Controls design review, documentation &amp; hand-off</h5>
+                <ul class="bullet-list">
+                  <li>Cut NCRs 18% and avoided a 2-week commissioning delay by reviewing schematics and I/O lists for 42 control panels (680+ I/O points) before construction.</li>
+                  <li>Handed over 6 sites on agreed milestones via weekly cost, schedule and quality KPIs (Power BI, SAP Ariba), with zero compliance failures.</li>
+                </ul>
+              </div>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Product Engineer, Process Automation</h4>
+
+              <p class="timeline-org">ABB</p>
+
+              <p class="timeline-date">Jan 2023 — Sep 2024</p>
+
+              <p class="timeline-place">Bengaluru, India</p>
+
+              <p class="timeline-text">
+                Lead on 3 concurrent DCS and automation projects, USD 12M combined: software migration, logic
+                conversion, testing and vendor coordination.
+              </p>
+
+              <div class="timeline-group">
+                <h5 class="h5 timeline-group-title">Software migration &amp; testing</h5>
+                <ul class="bullet-list">
+                  <li>Raised MTBF 43% by leading the migration of 45+ legacy ProControl P14 modules to ABB 800xA, converting C-based logic to IEC 61131-3 Structured Text built as standard, reusable function blocks.</li>
+                  <li>Closed 38 control-level defects across 1,200+ I/O signals with zero critical defects at go-live by running FAT/SAT from audit-ready I/O lists and ISA sheets.</li>
+                </ul>
+              </div>
+
+              <div class="timeline-group">
+                <h5 class="h5 timeline-group-title">Availability, alarms &amp; redundancy</h5>
+                <ul class="bullet-list">
+                  <li>Held DCS uptime above 99.9% on 3 live projects by configuring server redundancy (HAC), the historian and OPC DA/AE/UA links, and alarm rationalisation to NAMUR NE 107.</li>
+                  <li>Cut HMI build effort ~25% across six process stages by setting standard naming, layout and faceplate conventions for 800xA graphics built to the design data sheets.</li>
+                </ul>
+              </div>
+
+              <div class="timeline-group">
+                <h5 class="h5 timeline-group-title">Vendor coordination &amp; documentation</h5>
+                <ul class="bullet-list">
+                  <li>Held vendor on-time delivery above 94% (Siemens, Schneider Electric, Emerson), clearing every SLA breach within 48 hours, by directing multi-discipline controls, SCADA and OEM teams; wrote the SOPs and training adopted by operations.</li>
+                </ul>
+              </div>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Project Engineer, EPC Automation</h4>
+
+              <p class="timeline-org">Yokogawa</p>
+
+              <p class="timeline-date">Sep 2020 — Dec 2022</p>
+
+              <p class="timeline-place">Bengaluru, India</p>
+
+              <p class="timeline-text">
+                USD 250M Qatar Energy offshore EPC: telemetry and safety logic for the Maydan Mahzam and Bul Hanine
+                fields, 40+ wellhead jackets.
+              </p>
+
+              <div class="timeline-group">
+                <h5 class="h5 timeline-group-title">RTU &amp; telemetry integration</h5>
+                <ul class="bullet-list">
+                  <li>Achieved 99.7% uptime and critical alarm response under 50 ms by linking STARDOM RTUs to the CENTUM DCS at two production stations over OPC, with redundant fibre and radio links.</li>
+                  <li>Removed IP conflicts and tag-mapping errors before FAT by pre-testing Modbus RTU, DNP3 and OPC links with MODSIM; added wireless telemetry for 3 unpowered jackets.</li>
+                </ul>
+              </div>
+
+              <div class="timeline-group">
+                <h5 class="h5 timeline-group-title">Safety logic, root cause &amp; corrective actions</h5>
+                <ul class="bullet-list">
+                  <li>Reached zero open safety items across 8 SATs by verifying fire and gas and process cause and effect matrices against I/O schedules for every jacket, to the IEC 61511 lifecycle.</li>
+                  <li>Engineered the 16-step remote well-opening sequence for 4 jackets (13 wells) in STARDOM RTUs with SIL-rated shutdown interlocks and timed logic (48-hour standby auto-trip).</li>
+                  <li>Closed 38 quality exceptions through corrective-action plans while holding 8 OEM vendors (Emerson, Honeywell, ABB, Schneider Electric) to 91%+ on-time delivery across India and Qatar.</li>
+                </ul>
+              </div>
+
+              <div class="timeline-group">
+                <h5 class="h5 timeline-group-title">Testing &amp; documentation</h5>
+                <ul class="bullet-list">
+                  <li>Cut defect density 35% and reached a 93% first-pass rate (~1,700 of 1,850+ loop checks right first time) across 14 FATs and 8 SATs by standardising test procedures, with zero delays at final acceptance.</li>
+                  <li>Delivered 180+ ISA datasheets, 65 panel BOMs and 3,200+ cable schedules with zero rework; control narrative approved at Rev 4 (Code 10).</li>
+                </ul>
+              </div>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <svg class="icon" aria-hidden="true"><use href="#i-book"/></svg>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">MBA, Energy Management</h4>
+
+              <p class="timeline-org">TU Berlin</p>
+
+              <p class="timeline-place">Berlin, Germany</p>
+
+              <p class="timeline-text">
+                Thesis: green hydrogen cost model across 9 countries (8,760 hourly steps each); a 1% rise in financing
+                cost cancels a 10% gain in renewable output.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">B.Tech, Electronics and Instrumentation Engineering</h4>
+
+              <p class="timeline-org">Amrita Vishwa Vidyapeetham</p>
+
+              <p class="timeline-place">India</p>
+
+              <p class="timeline-text">
+                Publication: "ML Algorithms for Gas Leak Detection", Springer Singapore, 2020.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="contact-intro">
+          <p>
+            Based in Berlin, EU work authorization, open to relocation. Available immediately via email or LinkedIn.
+          </p>
+        </section>
+
+        <section class="contact-cards">
+
+          <ul class="contact-card-list">
+
+            <!-- the address link stretches over the whole card; the Copy button sits above it -->
+            <li>
+              <div class="contact-card">
+                <span class="icon-box"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></span>
+                <span class="contact-card-body">
+                  <span class="contact-title">Email</span>
+                  <a class="contact-card-value contact-card-link" href="mailto:akhil20698@gmail.com">akhil20698@gmail.com</a>
+                </span>
+                <button class="copy-btn" type="button" data-copy="akhil20698@gmail.com">
+                  <svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg>
+                  <span data-copy-label>Copy</span><span class="visually-hidden"> email address</span>
+                </button>
+                <span class="visually-hidden" role="status" data-copy-status></span>
+              </div>
+            </li>
+
+            <li>
+              <a class="contact-card" href="https://www.linkedin.com/in/akhilyad" target="_blank" rel="noopener noreferrer">
+                <span class="icon-box"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg></span>
+                <span class="contact-card-body">
+                  <span class="contact-title">LinkedIn</span>
+                  <span class="contact-card-value">linkedin.com/in/akhilyad</span>
+                </span>
+              </a>
+            </li>
+
+            <li>
+              <a class="contact-card" href="tel:+4917672678553">
+                <span class="icon-box"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></span>
+                <span class="contact-card-body">
+                  <span class="contact-title">Phone</span>
+                  <span class="contact-card-value">+49 176 72678553</span>
+                </span>
+              </a>
+            </li>
+
+            <li>
+              <a class="contact-card" href="https://github.com/akhilyad" target="_blank" rel="noopener noreferrer">
+                <span class="icon-box"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg></span>
+                <span class="contact-card-body">
+                  <span class="contact-title">GitHub</span>
+                  <span class="contact-card-value">github.com/akhilyad</span>
+                </span>
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+    </div>
+
+  </main>
+
+
+
+
+
+  <!--
+    - lightbox (project visuals)
+  -->
+
+  <dialog class="lightbox" data-lightbox-dialog aria-label="Image preview">
+    <figure class="lightbox-figure">
+      <img data-lightbox-img src="" alt="">
+      <figcaption class="lightbox-caption" data-lightbox-caption></figcaption>
+    </figure>
+
+    <button class="dialog-close lightbox-close" type="button" data-lightbox-close aria-label="Close">
+      <svg class="icon" aria-hidden="true"><use href="#i-close"/></svg>
+    </button>
+  </dialog>
+
+
+  <!--
+    - custom js
+  -->
+  <script src="./assets/js/script.js"></script>
+
+</body>
+
+</html>
