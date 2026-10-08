@@ -10,7 +10,7 @@ Tabs run in this order, so proof of work comes straight after the summary:
 
 | Tab | Content |
 | --- | --- |
-| About | Summary, six Engineering Scope cards (each with a standards footnote), and the Systems & Industrial Platforms badge grid |
+| About | Summary, six Engineering Scope cards, and the Systems & Industrial Platforms badge grid |
 | Projects | Industrial Projects & Technical Studies: three industrial projects and four modelling and analytics studies as a one-column stack (visual left, text right once the card has room: tablets and windows from about 1220px), with a filter tab bar; project visuals open full size |
 | Skills | The seven CV skill groups, certifications, languages |
 | Resume | Experience and education timeline with every CV bullet (the CV download lives only in the sidebar) |
@@ -25,7 +25,7 @@ The Systems & Industrial Platforms grid uses uniform badge plates: logos are con
 All visual values live in the `#TOKENS` block at the top of `assets/css/style.css`:
 
 - **Colour:** page `#F0F4F9`, cards `#FFFFFF`, insets and plates `#E8EEF5`; ghost chips `#F8FAFC` on a `#E2E8F0` hairline (the Tools card tints them blue); borders `#D8DFE8` / `#BCC7D4`; ink `#1E293B` / `#475569` / `#64748B`; accent `#0052CC` (hover `#2563EB`). A faint 40px engineering grid sits behind the cards. Light scheme only.
-- **Type:** Manrope, sizes 12 / 14 / 16 / 18 / 24 / 26 / 32 px, two weights (400 and 600), 24px line height. JetBrains Mono (400, 600) for technical labels, context tags, chips and standards footnotes.
+- **Type:** Manrope, sizes 12 / 14 / 16 / 18 / 24 / 26 / 32 px, two weights (400 and 600), 24px line height. JetBrains Mono (400, 600) for technical labels, context tags and chips.
 - **Spacing:** the 16-step scale from 5px to 100px, plus 16px and 24px card-rhythm steps; the page gutter is 16px below 768px and 30px from 768px.
 - **Radius:** `0 20px`, 6 (chips), 8, 12, 14, 20 and 30px.
 - **Elevation and motion:** resting cards use a two-layer ambient shadow (1px contact plus a soft 25px spread), buttons a 1px-3px one, hover and the floating nav a slightly deeper one, dialogs the deepest; 0.25s, 0.3s and 0.5s transitions.
