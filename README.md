@@ -18,7 +18,7 @@ Tabs run in this order, so proof of work comes straight after the summary:
 
 Tabs are mirrored in the URL hash, so `index.html#resume` links straight to a page and the back button works. Any element with `data-nav-link="<page>"` switches pages, such as the "let's connect" link in the summary; only navbar tabs show the current page.
 
-The Systems & Industrial Platforms grid uses uniform badge plates: logos are contained at 64px, and the CENTUM and STARDOM product shots fill their plate without distortion. ABB 800xA is the wide featured badge with a "Certified" stamp. Images live in `assets/images/toolbox/` and `assets/images/projects/`.
+The Systems & Industrial Platforms grid uses uniform badge plates: logos are contained at 64px, and the CENTUM, STARDOM and TwinCAT product shots fill their plate without distortion. ABB 800xA is the wide featured badge with a "Certified" stamp. Images live in `assets/images/toolbox/` and `assets/images/projects/`.
 
 ## Design tokens
 
